@@ -1,0 +1,38 @@
+/* Global improvements */
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  background-color: #f7f8fa;
+}
+
+/* Node base style */
+.base-node {
+  background: #ffffff;
+  border: 1px solid #e6e8ec;
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: 0.15s ease-in-out;
+}
+
+.base-node:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.node-header {
+  margin-bottom: 6px;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 6px;
+  font-weight: 600;
+}
+
+/* Toolbar style */
+.toolbar-container {
+  display: flex;
+  gap: 12px;
+  padding: 10px;
+  background: #ffffff;
+  border-bottom: 1px solid #e6e8ec;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}

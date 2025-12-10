@@ -1,0 +1,14 @@
+/* frontend/src/nodes/base-node.css */
+.base-node {
+  background: linear-gradient(180deg, #ffffff, #fbfdff);
+  border: 1px solid rgba(2, 6, 23, 0.04);
+  box-shadow: 0 6px 18px rgba(9, 10, 20, 0.04);
+  transition: transform 0.12s ease, box-shadow 0.12s;
+}
+.base-node:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(9, 10, 20, 0.06);
+}
+.node-content {
+  padding-top: 6px;
+}
