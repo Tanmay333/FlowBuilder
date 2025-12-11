@@ -71,3 +71,108 @@ Backend receives the pipeline and returns:
 git clone https://github.com/Tanmay333/FlowBuilder.git
 cd FlowBuilder
 
+```
+# ▶️ Running the Frontend
+Install dependencies:
+
+```
+
+cd frontend
+npm install
+npm start
+```
+The frontend will run at:
+👉 http://localhost:3000
+
+
+
+# ▶️ Running the Backend
+
+Install backend dependencies:
+```
+cd backend
+pip install fastapi uvicorn python-multipart
+```
+Start the FastAPI server:
+```
+uvicorn main:app --reload
+```
+Backend runs at:
+👉 http://localhost:8000
+
+API Documentation available at:
+👉 http://localhost:8000/docs
+
+## 🧪 Usage Guide 
+# 1. Drag nodes from the top toolbar
+Nodes like Input, LLM, Text, Output, Math, etc.
+
+# 2. Drop them onto the canvas
+You can place nodes anywhere.
+
+# 3. Connect nodes using handles
+Drag from the right handle of one node → to the left handle of another.
+
+# 4. Use TextNode with variables
+Inside TextNode, type:
+```
+
+Hello {{username}}, your score is {{score}}
+```
+
+Dynamic handles will automatically appear for each variable (username, score).
+
+# 5. Click Submit
+The frontend sends the pipeline to the backend.
+
+# 6. Backend will return:
+``` 
+Nodes: X
+Edges: Y
+Is DAG: true/false
+```
+This tells whether the workflow contains a cycle.
+```
+
+FlowBuilder/
+│
+├── backend/
+│   ├── main.py                 # FastAPI backend (DAG logic)
+│   └── __pycache__/            # Python cache
+│
+├── frontend/
+│   ├── public/                 # Static assets
+│   ├── src/
+│   │   ├── nodes/              # All node components
+│   │   ├── ui.js               # React Flow canvas logic
+│   │   ├── submit.js           # Submit button logic
+│   │   ├── toolbar.js          # Toolbar + draggable nodes
+│   │   ├── store.js            # Global state (Zustand)
+│   │   ├── App.js              # Layout
+│   │   └── index.js            # Entry point
+│   ├── package.json
+│   └── package-lock.json
+│
+└── README.md
+```
+## Future Enhancements
+
+Save & load workflows
+
+Export pipeline as JSON
+
+Workflow execution engine
+
+Undo/redo actions
+
+Dark mode
+
+Node search + filter
+
+Drag-to-connect animations
+
+
+
+
+
+
